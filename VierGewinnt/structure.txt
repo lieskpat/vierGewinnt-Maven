@@ -1,0 +1,549 @@
+.
+├── pom.xml
+├── readme.txt
+├── src
+│   ├── main
+│   │   └── java
+│   │       └── de
+│   │           └── viergewinnt
+│   │               ├── application
+│   │               │   ├── Main.java
+│   │               │   └── package-info.java
+│   │               ├── model
+│   │               │   ├── Diagonale.java
+│   │               │   ├── DiagonaleRichtung.java
+│   │               │   ├── Farbe.java
+│   │               │   ├── ISpalte.java
+│   │               │   ├── ISpielbrettFactory.java
+│   │               │   ├── ISpielbrettZelle.java
+│   │               │   ├── ISpielbrettZelleFactory.java
+│   │               │   ├── ISpieler.java
+│   │               │   ├── ISpielstein.java
+│   │               │   ├── IZellenTyp.java
+│   │               │   ├── Linie.java
+│   │               │   ├── package-info.java
+│   │               │   ├── Reihe.java
+│   │               │   ├── Spalte.java
+│   │               │   ├── Spiel.java
+│   │               │   ├── Spielbrett.java
+│   │               │   ├── SpielbrettFactory.java
+│   │               │   ├── SpielbrettZelle.java
+│   │               │   ├── SpielbrettZelleFactory.java
+│   │               │   ├── Spieler.java
+│   │               │   ├── SpielerDecorator.java
+│   │               │   ├── Spielstein.java
+│   │               │   └── ZellenTyp.java
+│   │               └── view
+│   │                   ├── application.css
+│   │                   ├── FXMLView.java
+│   │                   ├── FXMLViewable.java
+│   │                   ├── IMainViewModel.java
+│   │                   ├── ISpalteCommand.java
+│   │                   ├── ISpielbrettViewModel.java
+│   │                   ├── ISpielerViewModel.java
+│   │                   ├── MainView.fxml
+│   │                   ├── MainView.java
+│   │                   ├── MainViewModel.java
+│   │                   ├── package-info.java
+│   │                   ├── SpalteCommand.java
+│   │                   ├── SpielbrettView.fxml
+│   │                   ├── SpielbrettView.java
+│   │                   ├── SpielbrettViewModel.java
+│   │                   ├── SpielbrettZelleNotificationDecorator.java
+│   │                   ├── SpielbrettZelleNotificationDecoratorFactory.java
+│   │                   ├── SpielerView.fxml
+│   │                   ├── SpielerView.java
+│   │                   ├── SpielerViewModel.java
+│   │                   └── TraverseGraph.java
+│   └── test
+│       └── java
+│           └── de
+│               └── viergewinnt
+│                   ├── model
+│                   │   └── test
+│                   │       ├── AllTests.java
+│                   │       ├── FarbeTest.java
+│                   │       ├── LinienMock.java
+│                   │       ├── LinienTest.java
+│                   │       ├── package-info.java
+│                   │       ├── SpalteMock.java
+│                   │       ├── SpalteTest.java
+│                   │       ├── SpielbrettFactoryTest.java
+│                   │       ├── SpielbrettZelleTest.java
+│                   │       └── SpielerTest.java
+│                   └── view
+│                       └── test
+│                           ├── MainViewModelMock.java
+│                           ├── MainViewModelTest.java
+│                           ├── package-info.java
+│                           ├── SpielbrettViewModelMock.java
+│                           ├── SpielbrettViewModelTest.java
+│                           ├── SpielerViewMock.java
+│                           ├── SpielerViewModelMock.java
+│                           └── SpielerViewModelTest.java
+├── structure.txt
+└── target
+    ├── application.css
+    ├── classes
+    │   ├── application.css
+    │   ├── de
+    │   │   └── viergewinnt
+    │   │       ├── application
+    │   │       │   ├── Main$1.class
+    │   │       │   ├── Main$2.class
+    │   │       │   └── Main.class
+    │   │       ├── model
+    │   │       │   ├── Diagonale.class
+    │   │       │   ├── DiagonaleRichtung.class
+    │   │       │   ├── Farbe.class
+    │   │       │   ├── ISpalte.class
+    │   │       │   ├── ISpielbrettFactory.class
+    │   │       │   ├── ISpielbrettZelle.class
+    │   │       │   ├── ISpielbrettZelleFactory.class
+    │   │       │   ├── ISpieler.class
+    │   │       │   ├── ISpielstein.class
+    │   │       │   ├── IZellenTyp.class
+    │   │       │   ├── Linie.class
+    │   │       │   ├── Reihe.class
+    │   │       │   ├── Spalte.class
+    │   │       │   ├── Spiel.class
+    │   │       │   ├── Spielbrett.class
+    │   │       │   ├── SpielbrettFactory.class
+    │   │       │   ├── SpielbrettZelle.class
+    │   │       │   ├── SpielbrettZelleFactory.class
+    │   │       │   ├── Spieler.class
+    │   │       │   ├── SpielerDecorator.class
+    │   │       │   ├── Spielstein.class
+    │   │       │   └── ZellenTyp.class
+    │   │       └── view
+    │   │           ├── FXMLView.class
+    │   │           ├── FXMLViewable.class
+    │   │           ├── IMainViewModel.class
+    │   │           ├── ISpalteCommand.class
+    │   │           ├── ISpielbrettViewModel.class
+    │   │           ├── ISpielerViewModel.class
+    │   │           ├── MainView.class
+    │   │           ├── MainViewModel.class
+    │   │           ├── SpalteCommand.class
+    │   │           ├── SpielbrettView$1.class
+    │   │           ├── SpielbrettView$2.class
+    │   │           ├── SpielbrettView.class
+    │   │           ├── SpielbrettViewModel.class
+    │   │           ├── SpielbrettZelleNotificationDecorator.class
+    │   │           ├── SpielbrettZelleNotificationDecoratorFactory.class
+    │   │           ├── SpielerView.class
+    │   │           ├── SpielerViewModel$1.class
+    │   │           ├── SpielerViewModel.class
+    │   │           └── TraverseGraph.class
+    │   ├── MainView.fxml
+    │   ├── SpielbrettView.fxml
+    │   └── SpielerView.fxml
+    ├── de
+    │   └── viergewinnt
+    │       ├── application
+    │       │   ├── Main$1.class
+    │       │   ├── Main$2.class
+    │       │   └── Main.class
+    │       ├── model
+    │       │   ├── Diagonale.class
+    │       │   ├── DiagonaleRichtung.class
+    │       │   ├── Farbe.class
+    │       │   ├── ISpalte.class
+    │       │   ├── ISpielbrettFactory.class
+    │       │   ├── ISpielbrettZelle.class
+    │       │   ├── ISpielbrettZelleFactory.class
+    │       │   ├── ISpieler.class
+    │       │   ├── ISpielstein.class
+    │       │   ├── IZellenTyp.class
+    │       │   ├── Linie.class
+    │       │   ├── Reihe.class
+    │       │   ├── Spalte.class
+    │       │   ├── Spiel.class
+    │       │   ├── Spielbrett.class
+    │       │   ├── SpielbrettFactory.class
+    │       │   ├── SpielbrettZelle.class
+    │       │   ├── SpielbrettZelleFactory.class
+    │       │   ├── Spieler.class
+    │       │   ├── SpielerDecorator.class
+    │       │   ├── Spielstein.class
+    │       │   └── ZellenTyp.class
+    │       └── view
+    │           ├── FXMLView.class
+    │           ├── FXMLViewable.class
+    │           ├── IMainViewModel.class
+    │           ├── ISpalteCommand.class
+    │           ├── ISpielbrettViewModel.class
+    │           ├── ISpielerViewModel.class
+    │           ├── MainView.class
+    │           ├── MainViewModel.class
+    │           ├── SpalteCommand.class
+    │           ├── SpielbrettView$1.class
+    │           ├── SpielbrettView$2.class
+    │           ├── SpielbrettView.class
+    │           ├── SpielbrettViewModel.class
+    │           ├── SpielbrettZelleNotificationDecorator.class
+    │           ├── SpielbrettZelleNotificationDecoratorFactory.class
+    │           ├── SpielerView.class
+    │           ├── SpielerViewModel$1.class
+    │           ├── SpielerViewModel.class
+    │           └── TraverseGraph.class
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── jfx
+    │   ├── app
+    │   │   ├── application.css
+    │   │   ├── de
+    │   │   │   └── viergewinnt
+    │   │   │       ├── application
+    │   │   │       │   ├── Main$1.class
+    │   │   │       │   ├── Main$2.class
+    │   │   │       │   └── Main.class
+    │   │   │       ├── model
+    │   │   │       │   ├── Diagonale.class
+    │   │   │       │   ├── DiagonaleRichtung.class
+    │   │   │       │   ├── Farbe.class
+    │   │   │       │   ├── ISpalte.class
+    │   │   │       │   ├── ISpielbrettFactory.class
+    │   │   │       │   ├── ISpielbrettZelle.class
+    │   │   │       │   ├── ISpielbrettZelleFactory.class
+    │   │   │       │   ├── ISpieler.class
+    │   │   │       │   ├── ISpielstein.class
+    │   │   │       │   ├── IZellenTyp.class
+    │   │   │       │   ├── Linie.class
+    │   │   │       │   ├── Reihe.class
+    │   │   │       │   ├── Spalte.class
+    │   │   │       │   ├── Spiel.class
+    │   │   │       │   ├── Spielbrett.class
+    │   │   │       │   ├── SpielbrettFactory.class
+    │   │   │       │   ├── SpielbrettZelle.class
+    │   │   │       │   ├── SpielbrettZelleFactory.class
+    │   │   │       │   ├── Spieler.class
+    │   │   │       │   ├── SpielerDecorator.class
+    │   │   │       │   ├── Spielstein.class
+    │   │   │       │   └── ZellenTyp.class
+    │   │   │       └── view
+    │   │   │           ├── FXMLView.class
+    │   │   │           ├── FXMLViewable.class
+    │   │   │           ├── IMainViewModel.class
+    │   │   │           ├── ISpalteCommand.class
+    │   │   │           ├── ISpielbrettViewModel.class
+    │   │   │           ├── ISpielerViewModel.class
+    │   │   │           ├── MainView.class
+    │   │   │           ├── MainViewModel.class
+    │   │   │           ├── SpalteCommand.class
+    │   │   │           ├── SpielbrettView$1.class
+    │   │   │           ├── SpielbrettView$2.class
+    │   │   │           ├── SpielbrettView.class
+    │   │   │           ├── SpielbrettViewModel.class
+    │   │   │           ├── SpielbrettZelleNotificationDecorator.class
+    │   │   │           ├── SpielbrettZelleNotificationDecoratorFactory.class
+    │   │   │           ├── SpielerView.class
+    │   │   │           ├── SpielerViewModel$1.class
+    │   │   │           ├── SpielerViewModel.class
+    │   │   │           └── TraverseGraph.class
+    │   │   ├── MainView.fxml
+    │   │   ├── META-INF
+    │   │   │   └── MANIFEST.MF
+    │   │   ├── SpielbrettView.fxml
+    │   │   ├── SpielerView.fxml
+    │   │   └── VierGewinnt-0.0.1-SNAPSHOT-jfx.jar
+    │   └── native
+    │       └── VierGewinnt-0.0.1-SNAPSHOT
+    │           ├── app
+    │           │   ├── application.css
+    │           │   ├── de
+    │           │   │   └── viergewinnt
+    │           │   │       ├── application
+    │           │   │       │   ├── Main$1.class
+    │           │   │       │   ├── Main$2.class
+    │           │   │       │   └── Main.class
+    │           │   │       ├── model
+    │           │   │       │   ├── Diagonale.class
+    │           │   │       │   ├── DiagonaleRichtung.class
+    │           │   │       │   ├── Farbe.class
+    │           │   │       │   ├── ISpalte.class
+    │           │   │       │   ├── ISpielbrettFactory.class
+    │           │   │       │   ├── ISpielbrettZelle.class
+    │           │   │       │   ├── ISpielbrettZelleFactory.class
+    │           │   │       │   ├── ISpieler.class
+    │           │   │       │   ├── ISpielstein.class
+    │           │   │       │   ├── IZellenTyp.class
+    │           │   │       │   ├── Linie.class
+    │           │   │       │   ├── Reihe.class
+    │           │   │       │   ├── Spalte.class
+    │           │   │       │   ├── Spiel.class
+    │           │   │       │   ├── Spielbrett.class
+    │           │   │       │   ├── SpielbrettFactory.class
+    │           │   │       │   ├── SpielbrettZelle.class
+    │           │   │       │   ├── SpielbrettZelleFactory.class
+    │           │   │       │   ├── Spieler.class
+    │           │   │       │   ├── SpielerDecorator.class
+    │           │   │       │   ├── Spielstein.class
+    │           │   │       │   └── ZellenTyp.class
+    │           │   │       └── view
+    │           │   │           ├── FXMLView.class
+    │           │   │           ├── FXMLViewable.class
+    │           │   │           ├── IMainViewModel.class
+    │           │   │           ├── ISpalteCommand.class
+    │           │   │           ├── ISpielbrettViewModel.class
+    │           │   │           ├── ISpielerViewModel.class
+    │           │   │           ├── MainView.class
+    │           │   │           ├── MainViewModel.class
+    │           │   │           ├── SpalteCommand.class
+    │           │   │           ├── SpielbrettView$1.class
+    │           │   │           ├── SpielbrettView$2.class
+    │           │   │           ├── SpielbrettView.class
+    │           │   │           ├── SpielbrettViewModel.class
+    │           │   │           ├── SpielbrettZelleNotificationDecorator.class
+    │           │   │           ├── SpielbrettZelleNotificationDecoratorFactory.class
+    │           │   │           ├── SpielerView.class
+    │           │   │           ├── SpielerViewModel$1.class
+    │           │   │           ├── SpielerViewModel.class
+    │           │   │           └── TraverseGraph.class
+    │           │   ├── MainView.fxml
+    │           │   ├── META-INF
+    │           │   │   └── MANIFEST.MF
+    │           │   ├── SpielbrettView.fxml
+    │           │   ├── SpielerView.fxml
+    │           │   ├── VierGewinnt-0.0.1-SNAPSHOT.cfg
+    │           │   └── VierGewinnt-0.0.1-SNAPSHOT-jfx.jar
+    │           ├── msvcp120.dll
+    │           ├── msvcr100.dll
+    │           ├── msvcr120.dll
+    │           ├── packager.dll
+    │           ├── runtime
+    │           │   ├── bin
+    │           │   │   ├── attach.dll
+    │           │   │   ├── awt.dll
+    │           │   │   ├── bci.dll
+    │           │   │   ├── dcpr.dll
+    │           │   │   ├── decora_sse.dll
+    │           │   │   ├── deploy.dll
+    │           │   │   ├── dt_shmem.dll
+    │           │   │   ├── dt_socket.dll
+    │           │   │   ├── fontmanager.dll
+    │           │   │   ├── fxplugins.dll
+    │           │   │   ├── glass.dll
+    │           │   │   ├── glib-lite.dll
+    │           │   │   ├── gstreamer-lite.dll
+    │           │   │   ├── hprof.dll
+    │           │   │   ├── instrument.dll
+    │           │   │   ├── j2pcsc.dll
+    │           │   │   ├── j2pkcs11.dll
+    │           │   │   ├── jaas_nt.dll
+    │           │   │   ├── java.dll
+    │           │   │   ├── java_crw_demo.dll
+    │           │   │   ├── JavaAccessBridge-64.dll
+    │           │   │   ├── javafx_font.dll
+    │           │   │   ├── javafx_font_t2k.dll
+    │           │   │   ├── javafx_iio.dll
+    │           │   │   ├── jawt.dll
+    │           │   │   ├── JAWTAccessBridge-64.dll
+    │           │   │   ├── jdwp.dll
+    │           │   │   ├── jfr.dll
+    │           │   │   ├── jfxmedia.dll
+    │           │   │   ├── jfxwebkit.dll
+    │           │   │   ├── jli.dll
+    │           │   │   ├── jpeg.dll
+    │           │   │   ├── jsdt.dll
+    │           │   │   ├── jsound.dll
+    │           │   │   ├── jsoundds.dll
+    │           │   │   ├── kcms.dll
+    │           │   │   ├── lcms.dll
+    │           │   │   ├── management.dll
+    │           │   │   ├── mlib_image.dll
+    │           │   │   ├── msvcp120.dll
+    │           │   │   ├── msvcr100.dll
+    │           │   │   ├── msvcr120.dll
+    │           │   │   ├── net.dll
+    │           │   │   ├── nio.dll
+    │           │   │   ├── npt.dll
+    │           │   │   ├── plugin2
+    │           │   │   │   ├── msvcr100.dll
+    │           │   │   │   └── npjp2.dll
+    │           │   │   ├── prism_common.dll
+    │           │   │   ├── prism_d3d.dll
+    │           │   │   ├── prism_sw.dll
+    │           │   │   ├── resource.dll
+    │           │   │   ├── sawindbg.dll
+    │           │   │   ├── server
+    │           │   │   │   ├── classes.jsa
+    │           │   │   │   ├── jvm.dll
+    │           │   │   │   └── Xusage.txt
+    │           │   │   ├── splashscreen.dll
+    │           │   │   ├── sunec.dll
+    │           │   │   ├── sunmscapi.dll
+    │           │   │   ├── t2k.dll
+    │           │   │   ├── unpack.dll
+    │           │   │   ├── verify.dll
+    │           │   │   ├── w2k_lsa_auth.dll
+    │           │   │   ├── WindowsAccessBridge-64.dll
+    │           │   │   └── zip.dll
+    │           │   ├── COPYRIGHT
+    │           │   ├── lib
+    │           │   │   ├── accessibility.properties
+    │           │   │   ├── amd64
+    │           │   │   │   └── jvm.cfg
+    │           │   │   ├── calendars.properties
+    │           │   │   ├── charsets.jar
+    │           │   │   ├── classlist
+    │           │   │   ├── cmm
+    │           │   │   │   ├── CIEXYZ.pf
+    │           │   │   │   ├── GRAY.pf
+    │           │   │   │   ├── LINEAR_RGB.pf
+    │           │   │   │   ├── PYCC.pf
+    │           │   │   │   └── sRGB.pf
+    │           │   │   ├── content-types.properties
+    │           │   │   ├── currency.data
+    │           │   │   ├── ext
+    │           │   │   │   ├── access-bridge-64.jar
+    │           │   │   │   ├── cldrdata.jar
+    │           │   │   │   ├── dnsns.jar
+    │           │   │   │   ├── jaccess.jar
+    │           │   │   │   ├── jfxrt.jar
+    │           │   │   │   ├── localedata.jar
+    │           │   │   │   ├── meta-index
+    │           │   │   │   ├── nashorn.jar
+    │           │   │   │   ├── sunec.jar
+    │           │   │   │   ├── sunjce_provider.jar
+    │           │   │   │   ├── sunmscapi.jar
+    │           │   │   │   ├── sunpkcs11.jar
+    │           │   │   │   └── zipfs.jar
+    │           │   │   ├── flavormap.properties
+    │           │   │   ├── fontconfig.bfc
+    │           │   │   ├── fontconfig.properties.src
+    │           │   │   ├── fonts
+    │           │   │   │   ├── LucidaBrightDemiBold.ttf
+    │           │   │   │   ├── LucidaBrightDemiItalic.ttf
+    │           │   │   │   ├── LucidaBrightItalic.ttf
+    │           │   │   │   ├── LucidaBrightRegular.ttf
+    │           │   │   │   ├── LucidaSansDemiBold.ttf
+    │           │   │   │   ├── LucidaSansRegular.ttf
+    │           │   │   │   ├── LucidaTypewriterBold.ttf
+    │           │   │   │   └── LucidaTypewriterRegular.ttf
+    │           │   │   ├── hijrah-config-umalqura.properties
+    │           │   │   ├── images
+    │           │   │   │   └── cursors
+    │           │   │   │       ├── cursors.properties
+    │           │   │   │       ├── invalid32x32.gif
+    │           │   │   │       ├── win32_CopyDrop32x32.gif
+    │           │   │   │       ├── win32_CopyNoDrop32x32.gif
+    │           │   │   │       ├── win32_LinkDrop32x32.gif
+    │           │   │   │       ├── win32_LinkNoDrop32x32.gif
+    │           │   │   │       ├── win32_MoveDrop32x32.gif
+    │           │   │   │       └── win32_MoveNoDrop32x32.gif
+    │           │   │   ├── javafx.properties
+    │           │   │   ├── javaws.jar
+    │           │   │   ├── jce.jar
+    │           │   │   ├── jfr
+    │           │   │   │   ├── default.jfc
+    │           │   │   │   └── profile.jfc
+    │           │   │   ├── jfr.jar
+    │           │   │   ├── jfxswt.jar
+    │           │   │   ├── jsse.jar
+    │           │   │   ├── jvm.hprof.txt
+    │           │   │   ├── logging.properties
+    │           │   │   ├── management
+    │           │   │   │   ├── jmxremote.access
+    │           │   │   │   ├── jmxremote.password.template
+    │           │   │   │   ├── management.properties
+    │           │   │   │   └── snmp.acl.template
+    │           │   │   ├── management-agent.jar
+    │           │   │   ├── meta-index
+    │           │   │   ├── net.properties
+    │           │   │   ├── plugin.jar
+    │           │   │   ├── psfont.properties.ja
+    │           │   │   ├── psfontj2d.properties
+    │           │   │   ├── resources.jar
+    │           │   │   ├── rt.jar
+    │           │   │   ├── security
+    │           │   │   │   ├── blacklist
+    │           │   │   │   ├── blacklisted.certs
+    │           │   │   │   ├── cacerts
+    │           │   │   │   ├── java.policy
+    │           │   │   │   ├── java.security
+    │           │   │   │   ├── javaws.policy
+    │           │   │   │   ├── local_policy.jar
+    │           │   │   │   ├── trusted.libraries
+    │           │   │   │   └── US_export_policy.jar
+    │           │   │   ├── sound.properties
+    │           │   │   ├── tzdb.dat
+    │           │   │   └── tzmappings
+    │           │   ├── LICENSE
+    │           │   ├── README.txt
+    │           │   ├── THIRDPARTYLICENSEREADME.txt
+    │           │   ├── THIRDPARTYLICENSEREADME-JAVAFX.txt
+    │           │   └── Welcome.html
+    │           ├── VierGewinnt-0.0.1-SNAPSHOT.exe
+    │           └── VierGewinnt-0.0.1-SNAPSHOT.ico
+    ├── MainView.fxml
+    ├── maven-archiver
+    │   └── pom.properties
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       ├── compile
+    │       │   └── default-compile
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── testCompile
+    │           └── default-testCompile
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    ├── META-INF
+    │   ├── MANIFEST.MF
+    │   └── maven
+    │       └── de.lies.maven.viergewinnt
+    │           └── VierGewinnt
+    │               ├── pom.properties
+    │               └── pom.xml
+    ├── SpielbrettView.fxml
+    ├── SpielerView.fxml
+    ├── surefire-reports
+    │   ├── de.viergewinnt.model.test.FarbeTest.txt
+    │   ├── de.viergewinnt.model.test.LinienTest.txt
+    │   ├── de.viergewinnt.model.test.SpalteTest.txt
+    │   ├── de.viergewinnt.model.test.SpielbrettFactoryTest.txt
+    │   ├── de.viergewinnt.model.test.SpielbrettZelleTest.txt
+    │   ├── de.viergewinnt.model.test.SpielerTest.txt
+    │   ├── de.viergewinnt.view.test.MainViewModelTest.txt
+    │   ├── de.viergewinnt.view.test.SpielbrettViewModelTest.txt
+    │   ├── de.viergewinnt.view.test.SpielerViewModelTest.txt
+    │   ├── TEST-de.viergewinnt.model.test.FarbeTest.xml
+    │   ├── TEST-de.viergewinnt.model.test.LinienTest.xml
+    │   ├── TEST-de.viergewinnt.model.test.SpalteTest.xml
+    │   ├── TEST-de.viergewinnt.model.test.SpielbrettFactoryTest.xml
+    │   ├── TEST-de.viergewinnt.model.test.SpielbrettZelleTest.xml
+    │   ├── TEST-de.viergewinnt.model.test.SpielerTest.xml
+    │   ├── TEST-de.viergewinnt.view.test.MainViewModelTest.xml
+    │   ├── TEST-de.viergewinnt.view.test.SpielbrettViewModelTest.xml
+    │   └── TEST-de.viergewinnt.view.test.SpielerViewModelTest.xml
+    ├── test-classes
+    │   └── de
+    │       └── viergewinnt
+    │           ├── model
+    │           │   └── test
+    │           │       ├── AllTests.class
+    │           │       ├── FarbeTest.class
+    │           │       ├── LinienMock.class
+    │           │       ├── LinienTest.class
+    │           │       ├── SpalteMock.class
+    │           │       ├── SpalteTest.class
+    │           │       ├── SpielbrettFactoryTest.class
+    │           │       ├── SpielbrettZelleTest.class
+    │           │       └── SpielerTest.class
+    │           └── view
+    │               └── test
+    │                   ├── MainViewModelMock.class
+    │                   ├── MainViewModelTest$1.class
+    │                   ├── MainViewModelTest.class
+    │                   ├── SpielbrettViewModelMock.class
+    │                   ├── SpielbrettViewModelTest.class
+    │                   ├── SpielerViewMock.class
+    │                   ├── SpielerViewModelMock.class
+    │                   ├── SpielerViewModelTest$1.class
+    │                   └── SpielerViewModelTest.class
+    └── VierGewinnt-0.0.1-SNAPSHOT.jar
+
+82 directories, 464 files
